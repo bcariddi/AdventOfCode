@@ -14,7 +14,7 @@ for line in sys.stdin:
     if password.count(letter) >= mini and password.count(letter) <= maxi:
         count1 += 1 
 
-    if (password[mini - 1] == letter and password[maxi - 1] != letter) or (password[mini - 1] != letter and password[maxi - 1] == letter):
+    if (password[mini - 1] == letter) ^ (password[maxi - 1] == letter):
         count2 += 1
 
 
