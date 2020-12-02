@@ -11,21 +11,11 @@ for line in sys.stdin:
     mini, maxi = map(int, rule.split('-'))
     letter = letter.strip(':')
 
-    if password.count(letter) < mini or password.count(letter) > maxi:
-        pass
-    else:
+    if password.count(letter) >= mini and password.count(letter) <= maxi:
         count1 += 1 
 
-    if password[mini - 1] == letter:
-        if password[maxi - 1] == letter:
-            pass
-        else:
-            count2 += 1
-    elif password[maxi - 1] == letter:
-        if password[mini - 1] == letter:
-            pass
-        else:
-            count2 += 1
+    if (password[mini - 1] == letter and password[maxi - 1] != letter) or (password[mini - 1] != letter and password[maxi - 1] == letter):
+        count2 += 1
 
 
 print(count1)
