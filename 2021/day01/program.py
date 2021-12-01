@@ -7,27 +7,10 @@ numbers = []
 for line in sys.stdin:
     numbers.append(int(line))
 
-# part one
+# part 1
 
-count = 0
+print(sum(y > x for x, y in zip(numbers, numbers[1:])))
 
-for prev, curr in zip(numbers, numbers[1:]):
-    if curr > prev:
-        count += 1
+# part 2
 
-print(count)
-
-# part two
-
-i = 0
-count2 = 0
-
-while i < len(numbers) - 3:
-    sum1 = numbers[i] + numbers[i+1] + numbers[i+2]
-    sum2 = numbers[i+1] + numbers[i+2] + numbers[i+3] 
-    if sum2 > sum1:
-        count2 +=1 
-    
-    i += 1
-
-print(count2)
+print(sum(y > x for x, y in zip(numbers, numbers[3:])))
