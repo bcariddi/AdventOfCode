@@ -25,14 +25,6 @@ def corrupted(line):
     return 0, stack
 
 
-def find_reverse_stack(stack):
-    result = ''
-    for char in reversed(stack):
-        result += OPENS[char]
-
-    return result
-
-
 def find_completion_score(completion):
     total = 0
     for char in completion:
@@ -49,7 +41,7 @@ for line in input:
     score += corrupt
 
     if not corrupt:
-        completion = find_reverse_stack(stack)
+        completion = ''.join([OPENS[char] for char in reversed(stack)])
         completion_scores.append(find_completion_score(completion))
         
 print(score)
