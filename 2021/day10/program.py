@@ -7,6 +7,8 @@ from pprint import pprint
 input = sys.stdin.readlines()
 
 OPENS = {'(': ')', '[': ']', '{': '}', '<': '>'}
+PENALTY = {')': 3, ']': 57, '}': 1197, '>': 25137}
+COMPLETION = {')': 1, ']': 2, '}': 3, '>': 4}
 
 def corrupted(line):
     stack = []
@@ -18,14 +20,8 @@ def corrupted(line):
             expected = OPENS[last]
             if char != expected:
                 stack.append(last)
-                if char == ')':
-                    return 3, stack
-                elif char == ']':
-                    return 57, stack
-                elif char == '}':
-                    return 1197, stack
-                elif char == '>':
-                    return 25137, stack
+                return PENALTY[char], stack
+
     return 0, stack
 
 
@@ -41,20 +37,14 @@ def find_completion_score(completion):
     total = 0
     for char in completion:
         total *= 5
-        if char == ')':
-            total += 1
-        elif char == ']':
-            total += 2
-        elif char == '}':
-            total += 3
-        elif char == '>':
-            total += 4
+        total += COMPLETION[char]
     return total
         
 
 score = 0
 completion_scores = []
 for line in input:
+    line = line.strip()
     stack = []
     corrupt, stack = corrupted(line)
     score += corrupt
