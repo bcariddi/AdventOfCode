@@ -45,7 +45,6 @@ score = 0
 completion_scores = []
 for line in input:
     line = line.strip()
-    stack = []
     corrupt, stack = corrupted(line)
     score += corrupt
 
