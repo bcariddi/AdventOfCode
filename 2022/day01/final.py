@@ -3,12 +3,9 @@
 ''' Cleaned up version of my fast attempt '''
 
 import sys
-from pprint import pprint
-from collections import defaultdict
 
 
 inp = [x.strip() for x in sys.stdin.readlines()]
-
 
 # part 1
 sums = []
