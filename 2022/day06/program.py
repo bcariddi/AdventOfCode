@@ -11,13 +11,11 @@ inp = sys.stdin.readlines()[0].strip()
 def find_marker_index(inp, n):
     recent = []
     for i, c in enumerate(inp):
-        if i < n:
-            recent.append(c)
-        else:
+        if i >= n:
             if len(set(recent)) == n:
                 return i
             recent.pop(0)
-            recent.append(c)
+        recent.append(c)
     return -1
 
 # part 1
