@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 
 import sys
-from pprint import pprint
-from collections import defaultdict
 
 
 inp = sys.stdin.readlines()[0].strip()
