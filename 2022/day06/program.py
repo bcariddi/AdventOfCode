@@ -16,6 +16,7 @@ def find_marker_index(inp, n):
         recent.append(c)
     return -1
 
+
 # part 1
 print(find_marker_index(inp, 4))
 
