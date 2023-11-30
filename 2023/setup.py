@@ -25,7 +25,11 @@ except OSError:
     exit(1)
     
 # Copy template program into directory
-shutil.copy('template.py', f'{path}/program.py')
+try:
+    shutil.copy('template.py', f'{path}/program.py')
+    print(f'✅ Copied template program to {path}/program.py')
+except Exception:
+    print(f'❌ Failed to copy template program')
 
 # Create test input file
 with open(f'{path}/test.txt', 'w') as f:
@@ -33,13 +37,9 @@ with open(f'{path}/test.txt', 'w') as f:
     try:
         response = requests.get(f'https://adventofcode.com/2023/day/{day}')
         response.raise_for_status()
-
         soup = BeautifulSoup(response.content, 'html.parser')
-
         test_input = soup.find('pre').text.strip()
-
         f.write(test_input)
-
         print(f'✅ Wrote test input to {path}/test.txt')
     except Exception:
         print(f'❌ Could not find test input, you will need to manually copy it')
