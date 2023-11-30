@@ -9,3 +9,7 @@ inp = [l.strip() for l in sys.stdin.readlines()]
 
 
 # part 1
+
+
+# part 2
+

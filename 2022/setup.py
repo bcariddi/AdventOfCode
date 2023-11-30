@@ -29,3 +29,4 @@ with open(f'{path}/test.txt', 'w') as f:
     pass
 with open(f'{path}/input.txt', 'w') as f:
     pass
+
