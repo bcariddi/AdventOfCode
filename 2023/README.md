@@ -18,3 +18,32 @@ day01/
 |__ test.txt      (the sample input on AoC's site)
 |__ input.txt     (an empty file to copy your input into)
 ```
+
+## Progress
+```
+- [ ]  1 - H:MM:SS
+- [ ]  2
+- [ ]  3
+- [ ]  4
+- [ ]  5
+- [ ]  6
+- [ ]  7
+- [ ]  8
+- [ ]  9
+- [ ] 10
+- [ ] 11
+- [ ] 12
+- [ ] 13
+- [ ] 14
+- [ ] 15
+- [ ] 16
+- [ ] 17
+- [ ] 18
+- [ ] 19
+- [ ] 20
+- [ ] 21
+- [ ] 22
+- [ ] 23
+- [ ] 24
+- [ ] 25
+```
