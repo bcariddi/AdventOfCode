@@ -1,17 +1,21 @@
 # bcariddi's Advent of Code 2024
 
 ## Usage
+
 To set up a directory with skeleton files for the current day:
+
 ```
-$ python setup.py
+python setup.py
 ```
 
 For a specified day:
+
 ```
-$ python setup.py 1
+python setup.py 1
 ```
 
 This will set up a directory with the following structure:
+
 ```
 day01/
 |__ program.py    (blank template for day's Python code)
@@ -20,8 +24,9 @@ day01/
 ```
 
 ## Progress
-- [ ] 01
-- [ ] 02
+
+- [x] 01
+- [x] 02
 - [ ] 03
 - [ ] 04
 - [ ] 05
@@ -45,4 +50,3 @@ day01/
 - [ ] 23
 - [ ] 24
 - [ ] 25
-
