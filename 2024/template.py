@@ -5,11 +5,9 @@ from pprint import pprint
 from collections import defaultdict
 
 
-inp = [l.strip() for l in sys.stdin.readlines()]
+def main():
+    inp = [l.strip() for l in sys.stdin.readlines()]
 
 
-# part 1
-
-
-# part 2
-
+if __name__ == '__main__':
+    main()
