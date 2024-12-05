@@ -1,3 +1,8 @@
 [lint]
 # Ignore ambiguous-variable-name so we can use 'l' as a variable name
 ignore = ["E741"]
+
+[format]
+# Prefer single quotes over double quotes.
+quote-style = "single"
+
