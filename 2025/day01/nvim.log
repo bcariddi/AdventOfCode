@@ -1,0 +1,19 @@
+
+sourcing "nvim_exec2()"
+finished sourcing nvim_exec2()
+sourcing "/opt/homebrew/Cellar/neovim/0.11.1/share/nvim/runtime/ftplugin.vim"
+finished sourcing /opt/homebrew/Cellar/neovim/0.11.1/share/nvim/runtime/ftplugin.vim
+sourcing "/opt/homebrew/Cellar/neovim/0.11.1/share/nvim/runtime/indent.vim"
+finished sourcing /opt/homebrew/Cellar/neovim/0.11.1/share/nvim/runtime/indent.vim
+could not source "/opt/homebrew/etc/xdg/nvim/sysinit.vim"
+could not source "/etc/xdg/nvim/sysinit.vim"
+could not source "$VIM/sysinit.vim"
+sourcing "/Users/bcariddi/.config/nvim/init.lua"
+                                                LazyVim requires Neovim >= 0.11.2
+For more info, see: https://github.com/LazyVim/LazyVim/issues/6421
+Press any key to exit
+Executing TermResponse Autocommands for "*"
+autocommand <Lua 68: vim/_defaults.lua:0>
+
+line 0: sourcing "nvim_exec2() called at /Users/bcariddi/.config/nvim/init.lua:0"
+Writing ShaDa file "/Users/bcariddi/.local/state/nvim/shada/main.shada"
